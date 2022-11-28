@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+  <link rel="stylesheet" type="text/css" href="css/registracija.css">
+  <title>Code with Bogdan</title>
+</head>
+<body>
+  <div class="container">
+    <nav class ="menu">
+
+      <a href="index.html"><img src="img/logo.png" alt="Logo" class ="logo"></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Početna</a></li>
+        <li class="nav-item"><a href="kursevi.html">Kursevi</a></li>
+        <li class="nav-item"><a href="registracija.html">Registracija</a></li>
+        <li class="nav-item"><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+    </nav>
+    
+    <div class="form-container">
+    <form id="form">
+      <h3 id="naslov">REGISTRACIJA</h3>
+
+      <div class="input-control">
+        <input type="text" id="username" name="username" placeholder="Korisničko ime" class="form-item">
+        <div class="error"></div>
+      </div>
+
+     <div class="input-control">
+        <input type="text" id="email" name="email" placeholder="Email" class="form-item">
+        <div class="error"></div>
+     </div>
+
+     <div class="input-control">
+        <input type="password" id="pw" name="pw" placeholder="Šifra" class="form-item">
+        <div class="error"></div>
+     </div>
+
+     <div class="input-control">
+        <input type="password" id="pwConfirm" name="pwConfirm" placeholder="Potvrdite šifru" class="form-item">
+        <div class="error"></div>
+    </div>
+
+      <div class="pol">
+      <label>Muško
+        <input type="radio" id="pol-muski" name="pol" value="Muško" class="form-item" checked required>
+      </label>
+      <label>Žensko
+        <input type="radio" id="pol-zenski" name="pol" value="Žensko" class="form-item" required>
+      </label>
+      </div>
+
+      <select name="zanimanje" id="zanimanje" class="form-item">
+        <option value="Student">Student</option>
+        <option value="Zaposlen">Zaposlen</option>
+        <option value="Nezaposlen">Nezaposlen</option>
+      </select>
+
+      <div class="buttonReg" id="buttonReg">
+        <button type="button">Registruj se</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    Copyright &copy; by Bogdan Radmilac 2022.
+  </footer>
+  </div>
+  <div class="popup" id = "popup">
+    <div class="popup-header">
+      <div class="naslov">Informacije</div>
+      <button id ="izlaz">&times;</button>
+    </div>
+    <div class="popup-body">
+      <div>Korisničko ime: <div id="popupIme"></div></div>
+      <div>Email: <div id="popupEmail"></div></div>
+      <div>Šifra: <div id="popupSifra"></div></div>
+      <div>Pol: <div id="popupPol"></div></div>
+      <div>Zanimanje: <div id="popupZanimanje"></div></div>
+      <div>Datum registracije: <div id="popupDatum"></div></div>
+    </div>
+  </div>
+  <script src="script/registracija.js"></script>
+  <script src="script/hamburger.js"></script>
+</body>
+</html>
